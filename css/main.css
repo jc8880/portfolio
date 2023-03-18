@@ -5,7 +5,15 @@
 
 h1 {
     font-size: 1.75rem;
-    padding: 0 1rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    color: #9987BD;
+    font-size: 1rem;
 }
 
 a {
@@ -18,6 +26,36 @@ a {
 a:hover, a:focus {
     text-decoration: underline;
 }
+
+.inputField {
+    outline: 0;
+    border: 0.1rem solid #9987BD;
+    background-color: whitesmoke;
+    height: 2rem;
+    width: 100%;
+    min-width: 6rem;
+    max-width: 15rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.btn {
+    background-color: #3b3b3b;
+    color: white;
+    border: none;
+    height: 2rem;
+    width: 100%;
+    max-width: 7rem;
+    min-width: 4rem;
+}
+
+.btn:hover, .btn:focus {
+    transition-duration: 0.5s;
+    color: #9987BD;
+    /* border: 0.1rem solid black; */
+    transform: scale(1.03, 1.03);
+}
 /* END OF BASIC STYLING */
 
 /* HEADER/FOOTER */
@@ -29,32 +67,39 @@ a:hover, a:focus {
     padding: 2rem 5%;
     justify-content: end;
     text-align: end;
+    font-size: 1rem;
 }
 
 .navLink {
-    font-size: 1.1rem;
     color: black;
     padding: 0 1rem;
 }
 
-.currentPage, .navLink:hover, .navLink:focus {
+.navLink:hover, .navLink:focus {
     font-weight: bold;
     text-decoration: none;
+    color: black;
+}
+
+.currentPage {
+    color: gray;
 }
 
 .footerName {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0 1rem;
     font-weight: bold;
 }
 /* END OF HEADER/FOOTER */
 
-/* STYLEGUIDE STRUCTURE */
+/* MAIN FLEXBOX */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
+    max-width: 70rem;
+    margin: 0 auto;
 }
 
 .containerItem {
@@ -64,15 +109,15 @@ a:hover, a:focus {
     margin: 1rem;
     padding: 1rem;
 }
+/* END OF MAIN FLEXBOX */
 
+/* STYLEGUIDE STRUCTURE */
 .styleGuideBorder {
-    border: solid;
-    border-width: 0.25rem;
-    border-color: #9987BD;
+    border: 0.25rem solid #9987BD;
 }
 
 .darkBackground {
-    background-color: rgb(55, 55, 55);
+    background-color: #3b3b3b;
     color: white;
 }
 /* END OF STYLEGUIDE STRUCTURE */
