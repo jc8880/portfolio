@@ -132,3 +132,10 @@ a:hover, a:focus {
     color: white;
 }
 /* END OF STYLEGUIDE STRUCTURE */
+
+
+.leadImg {
+    object-fit: cover;
+    width: 100%;
+    height: 20rem;
+}
