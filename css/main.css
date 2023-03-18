@@ -1,3 +1,4 @@
+/* BASIC STYLING */
 .fontstyleMain {
     font-family: "urbanist", sans-serif;
 }
@@ -7,8 +8,20 @@ h1 {
     padding: 0 1rem;
 }
 
-/* HEADER */
-.headContainer {
+a {
+    text-decoration: none;
+    color: #9987BD;
+    /* CODE REFERENCES https://www.dotnettricks.com/learn/stylesheet/css-to-force-long-text-and-urls-to-wrap-on-all-browser#:~:text=Sometimes%20we%20need%20to%20wrap%20a%20long%20text,line%20by%20defining%20css%20word-wrap%20property%20to%20break-word. */
+    word-wrap: break-word;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+/* END OF BASIC STYLING */
+
+/* HEADER/FOOTER */
+.rightContainer {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -20,12 +33,46 @@ h1 {
 
 .navLink {
     font-size: 1.1rem;
-    text-decoration: none;
     color: black;
     padding: 0 1rem;
 }
 
 .currentPage, .navLink:hover, .navLink:focus {
     font-weight: bold;
+    text-decoration: none;
 }
-/* END OF HEADER */
+
+.footerName {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    font-weight: bold;
+}
+/* END OF HEADER/FOOTER */
+
+/* STYLEGUIDE STRUCTURE */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.containerItem {
+    flex: 1;
+    min-width: 25%;
+    max-width: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.styleGuideBorder {
+    border: solid;
+    border-width: 0.25rem;
+    border-color: #9987BD;
+}
+
+.darkBackground {
+    background-color: rgb(55, 55, 55);
+    color: white;
+}
+/* END OF STYLEGUIDE STRUCTURE */
