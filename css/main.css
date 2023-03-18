@@ -1,3 +1,31 @@
-.fontstyle-main {
-    font-family: urbanist, sans-serif;
+.fontstyleMain {
+    font-family: "urbanist", sans-serif;
 }
+
+h1 {
+    font-size: 1.75rem;
+    padding: 0 1rem;
+}
+
+/* HEADER */
+.headContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    /* NOTE % helps spacing scale when window shrinks */
+    padding: 2rem 5%;
+    justify-content: end;
+    text-align: end;
+}
+
+.navLink {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: black;
+    padding: 0 1rem;
+}
+
+.currentPage, .navLink:hover, .navLink:focus {
+    font-weight: bold;
+}
+/* END OF HEADER */
