@@ -60,8 +60,31 @@ a:hover, a:focus {
 }
 /* END OF BASIC STYLING */
 
-/* HEADER/FOOTER */
-.rightContainer {
+/* CONTAINERS */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.containerItem {
+    flex: 1;
+    min-width: 40%;
+    max-width: 25rem;
+    margin: 2rem;
+}
+
+.singleColumnContainer {
+    display: block;
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.headContainer {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -72,6 +95,26 @@ a:hover, a:focus {
     font-size: 1rem;
 }
 
+.spacedContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: "first baseline";
+    /* NOTE % helps spacing scale when window shrinks */
+    padding: 2rem 5%;
+    justify-content: space-between;
+    text-align: right;
+    font-size: 1rem;
+}
+
+.rightItem {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    justify-content: end;
+}
+/* END OF CONTAINERS */
+
+/* HEADER/FOOTER */
 .navLink {
     color: black;
     padding: 0 1rem;
@@ -94,33 +137,13 @@ a:hover, a:focus {
 .footerLink {
     font-size: 0.8rem;
 }
+
+.socialsIcon {
+    /* NOTE 21px is minimum defined by LinkedIn */
+    width: 21px;
+    padding: 0 0.75rem;
+}
 /* END OF HEADER/FOOTER */
-
-/* CONTAINERS */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-    max-width: 75rem;
-    margin: 0 auto;
-}
-
-.containerItem {
-    flex: 1;
-    min-width: 30%;
-    max-width: 25rem;
-    margin: 2rem;
-    padding: 1rem;
-}
-
-.singleColumnContainer {
-    display: block;
-    max-width: 45rem;
-    margin: 0 auto;
-    padding: 2rem;
-}
-/* END OF CONTAINERS */
 
 /* STYLEGUIDE STRUCTURE */
 .styleGuideBorder {
@@ -133,9 +156,15 @@ a:hover, a:focus {
 }
 /* END OF STYLEGUIDE STRUCTURE */
 
-
+/* INDEX */
 .leadImg {
     object-fit: cover;
     width: 100%;
     height: 20rem;
 }
+
+.leadImg:hover, .leadImg:focus {
+    transition-duration: 0.3s;
+    opacity: 80%;
+}
+/* END OF INDEX */
