@@ -3,6 +3,10 @@
     font-family: "urbanist", sans-serif;
 }
 
+.smlFontSize {
+    font-size: 0.8rem;
+}
+
 h1 {
     font-size: 1.75rem;
 }
@@ -58,6 +62,10 @@ a:hover, a:focus {
     color: #9987BD;
     transform: scale(1.03, 1.03);
 }
+
+.textSpacer {
+    margin: 8rem;
+}
 /* END OF BASIC STYLING */
 
 /* CONTAINERS */
@@ -72,8 +80,8 @@ a:hover, a:focus {
 
 .containerItem {
     flex: 1;
-    min-width: 40%;
-    max-width: 25rem;
+    min-width: 15rem;
+    max-width: 28rem;
     margin: 2rem;
 }
 
@@ -134,10 +142,6 @@ a:hover, a:focus {
     font-weight: bold;
 }
 
-.footerLink {
-    font-size: 0.8rem;
-}
-
 .socialsIcon {
     /* NOTE 21px is minimum defined by LinkedIn */
     width: 21px;
@@ -165,6 +169,25 @@ a:hover, a:focus {
 
 .leadImg:hover, .leadImg:focus {
     transition-duration: 0.3s;
-    opacity: 80%;
+    /* Code referenced https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/ */
+    filter: brightness(80%);
+    transform: scale(1.008, 1.008);
 }
 /* END OF INDEX */
+
+/* ABOUT */
+.aboutImgItem {
+    min-width: 8rem;
+    max-width: 15rem;
+}
+
+@media screen and (max-width:31rem) {
+    .aboutImgItem {
+        order: 1;
+    }
+
+    .aboutTextItem {
+        order: 2;
+    }
+}
+/* END OF ABOUT */
