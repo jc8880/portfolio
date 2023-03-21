@@ -158,6 +158,13 @@ a:hover, a:focus {
     background-color: #3b3b3b;
     color: white;
 }
+
+.styleGuideImg {
+    min-width: 1rem;
+    max-width: 8rem;
+    width: 100%;
+    object-fit: cover;
+}
 /* END OF STYLEGUIDE STRUCTURE */
 
 /* INDEX */
