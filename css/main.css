@@ -13,6 +13,7 @@ h1 {
 
 h2 {
     text-align: center;
+    font-size: 2.25rem;
 }
 
 h3 {
@@ -124,8 +125,9 @@ a:hover, a:focus {
 
 /* HEADER/FOOTER */
 .navLink {
+    display: inline-block;
     color: black;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .navLink:hover, .navLink:focus {
@@ -152,6 +154,7 @@ a:hover, a:focus {
 /* STYLEGUIDE STRUCTURE */
 .styleGuideBorder {
     border: 0.25rem solid #9987BD;
+    padding: 0.5rem;
 }
 
 .darkBackground {
@@ -161,7 +164,7 @@ a:hover, a:focus {
 
 .styleGuideImg {
     min-width: 1rem;
-    max-width: 8rem;
+    max-width: 12rem;
     width: 100%;
     object-fit: cover;
 }
