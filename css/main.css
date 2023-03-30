@@ -63,21 +63,21 @@ figcaption {
 
 .btn {
     display: block;
-    background-color: #3b3b3b;
+    background-color: #9987BD;
     color: white;
-    border: none;
+    border: #9987BD solid 0.08rem;
     text-align: center;
     /* CODE REFERENCES https://developer.mozilla.org/en-US/docs/Web/CSS/max-content */
     max-width: max-content;
     min-width: 4rem;
     padding: 0.6rem;
-    margin: 0 auto;
+    margin: 3rem auto;
 }
 
 .btn:hover, .btn:focus {
     transition-duration: 0.5s;
-    color: #9987BD;
-    transform: scale(1.02, 1.02);
+    border: #3b3b3b solid 0.08rem;
+    transform: scale(1.01, 1.01);
     text-decoration: none;
 }
 
@@ -128,7 +128,7 @@ figcaption {
 .spacedContainer {
     display: flex;
     flex-wrap: nowrap;
-    align-items: "first baseline";
+    align-items: baseline;
     /* NOTE % helps spacing scale when window shrinks */
     padding: 2rem 5%;
     justify-content: space-between;
