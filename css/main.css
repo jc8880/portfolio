@@ -8,13 +8,14 @@
 }
 
 h1 {
-    font-size: 1.75rem;
+    font-size: 1.85rem;
 }
 
 h2 {
     text-align: center;
-    font-size: 2.25rem;
-    margin: 1rem;
+    font-size: 3.5rem;
+    margin: 0;
+    margin-top: 3rem;
 }
 
 h3 {
@@ -85,6 +86,11 @@ figcaption {
     background-color: #DEDEDE;
 }
 
+.darkBg {
+    background-color: #3b3b3b;
+    color: white;
+}
+
 .textSpacer {
     margin: 7rem;
 }
@@ -104,7 +110,7 @@ figcaption {
     flex: 1;
     min-width: 15rem;
     max-width: 26rem;
-    margin: 1rem 2rem;
+    margin: 3rem 2rem;
 }
 
 .singleColumnContainer {
@@ -119,7 +125,7 @@ figcaption {
     flex-wrap: wrap;
     align-items: baseline;
     /* NOTE % helps spacing scale when window shrinks */
-    padding: 2rem 5%;
+    padding: 1rem 5%;
     justify-content: end;
     text-align: end;
     font-size: 1rem;
@@ -178,11 +184,6 @@ figcaption {
     padding: 0.5rem;
 }
 
-.darkBackground {
-    background-color: #3b3b3b;
-    color: white;
-}
-
 .styleGuideImg {
     min-width: 1rem;
     max-width: 12rem;
@@ -196,18 +197,68 @@ figcaption {
 /* END OF STYLEGUIDE STRUCTURE */
 
 /* INDEX */
-.indexLeadImg {
+.landing {
+    height: 100vh;
+}
+
+.landingText {
+    text-align: left;
+    padding: 2rem 5%;
+    max-width: 50%;
+}
+
+@media screen and (max-width: 45rem) {
+    .landingText { max-width: 80%;
+        font-size: 3rem; }
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.textColour1 {
+    color: #9987BD;
+}
+
+.textColour2 {
+    color: #a1964c;
+}
+
+.indexProjectImg {
     object-fit: cover;
     width: 100%;
     height: 20rem;
 }
 
-.indexLeadImg:hover, .indexLeadImg:focus {
+.indexProjectImg:hover, .indexProjectImg:focus {
     transition-duration: 0.3s;
-    /* Code referenced https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/ */
+    /* CoODE REFERENCES https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/ */
     filter: brightness(80%);
     transform: scale(1.008, 1.008);
 }
+
+/* CODE REFERENCES https://stackoverflow.com/questions/36618548/animate-an-element-on-a-sine-path */
+/* .motion {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    background: #DEDEDE;
+    animation: horizontal 3s alternate infinite ease-in-out;
+}
+
+.motionX {
+    position: absolute;
+    z-index: -1;
+}
+
+@keyframes vertical {
+    to { transform: translatey(3rem);}
+  }
+@keyframes horizontal {
+    from { transform: translatex(0);}
+    to { transform: translatex(90vw);}
+  } */
+
 /* END OF INDEX */
 
 /* ABOUT */
