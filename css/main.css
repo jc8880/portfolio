@@ -129,6 +129,11 @@ figcaption {
     .indexContainerItem { height: 25rem; }
 }
 
+.indexContainerItem:hover {
+    /* NOTE Allows for img zoom on hover (but doesnt hide focus outline) */
+    overflow: hidden;
+}
+
 .itemEmphasis {
     flex: 1 40%;
 }
@@ -270,19 +275,17 @@ figcaption {
 }
 
 .indexProjectImg {
+    display: block;
     object-fit: cover;
     width: 100%;
     height: 100%;
-    /* Upon exiting hover */
-    transition: all 0.8s ease;
-    transform: scale(1);
 }
 
 .indexProjectImg:hover, .indexProjectImg:focus {
     transition: all 0.8s;
     /* CODE REFERENCES https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/ */
     filter: brightness(70%);
-    transform: scale(1.025);
+    transform: scale(1.04);
 }
 
 .indexProjectText {
