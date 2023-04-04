@@ -49,6 +49,7 @@ figcaption {
     padding: 0.5rem 0;
 }
 
+/* NOTE future styling for input boxes */
 .inputField {
     outline: 0;
     border: 0.1rem solid #9987BD;
@@ -117,12 +118,14 @@ figcaption {
     flex: 1 30%;
     margin: 0.6rem 0.75rem;
     min-width: 15rem;
-    min-height: 20rem;
-    max-height: 28rem;
+    max-width: 38rem;
 }
 
-@media screen and (max-width: 45rem) {
-    /* NOTE ensure that all items remain same size, despite some images being able to scale larger */
+/* NOTE ensure that all items remain same size, despite some images being able to scale larger */
+@media screen and (max-width: 40rem) {
+    .indexContainerItem { height: 22rem; }
+}
+@media screen and (min-width: 65rem) {
     .indexContainerItem { height: 25rem; }
 }
 
@@ -269,39 +272,29 @@ figcaption {
 .indexProjectImg {
     object-fit: cover;
     width: 100%;
-    /* NOTE 90% of containerItem to allow space for text at bottom */
-    height: 90%;
+    height: 100%;
+    /* Upon exiting hover */
+    transition: all 0.8s ease;
+    transform: scale(1);
 }
 
 .indexProjectImg:hover, .indexProjectImg:focus {
-    transition-duration: 0.3s;
-    /* CoODE REFERENCES https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/ */
-    filter: brightness(80%);
-    transform: scale(1.008, 1.008);
+    transition: all 0.8s;
+    /* CODE REFERENCES https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/ */
+    filter: brightness(70%);
+    transform: scale(1.025);
 }
 
-/* CODE REFERENCES https://stackoverflow.com/questions/36618548/animate-an-element-on-a-sine-path */
-/* .motion {
+.indexProjectText {
     position: absolute;
-    width: 10vw;
-    height: 10vw;
-    background: #DEDEDE;
-    animation: horizontal 3s alternate infinite ease-in-out;
+    margin-top: -3rem;
+    margin-left: 1rem;
+    padding: 0.22rem;
 }
 
-.motionX {
-    position: absolute;
-    z-index: -1;
+.indexTextBg {
+    background-color: rgba(59,59,59,0.85);
 }
-
-@keyframes vertical {
-    to { transform: translatey(3rem);}
-  }
-@keyframes horizontal {
-    from { transform: translatex(0);}
-    to { transform: translatex(90vw);}
-  } */
-
 /* END OF INDEX */
 
 /* ABOUT */
