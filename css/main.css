@@ -119,6 +119,8 @@ figcaption {
     margin: 0.6rem 0.75rem;
     min-width: 15rem;
     max-width: 38rem;
+    /* NOTE Allows for img zoom on hover */
+    overflow: hidden;
 }
 
 /* NOTE ensure that all items remain same size, despite some images being able to scale larger */
@@ -129,9 +131,10 @@ figcaption {
     .indexContainerItem { height: 25rem; }
 }
 
-.indexContainerItem:hover {
-    /* NOTE Allows for img zoom on hover (but doesnt hide focus outline) */
-    overflow: hidden;
+/* CODE REFERENCES https://css-tricks.com/almanac/selectors/f/focus-within/ */
+.indexContainerItem:focus-within {
+    /* NOTE Ensure focus is applied despite overflow:hidden */
+    outline: solid 1.5px black;
 }
 
 .itemEmphasis {
@@ -279,13 +282,14 @@ figcaption {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    transition: all 0.8s ease;
 }
 
 .indexProjectImg:hover, .indexProjectImg:focus {
     transition: all 0.8s;
     /* CODE REFERENCES https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/ */
     filter: brightness(70%);
-    transform: scale(1.04);
+    transform: scale(1.1);
 }
 
 .indexProjectText {
